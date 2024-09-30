@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --Dark_cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very_dark_blue: hsl(212, 21%, 14%);
+  --Dark_grayish_blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--Cream);
+  color: var(--Dark_grayish_blue);
+  overflow: auto;
+}
+.card {
+  width: 600px;
+  height: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--White);
+}
+.card .p1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .p2 {
+  padding: 35px 32px 32px 32px;
+}
+.card h5 {
+  letter-spacing: 4px;
+  font-weight: normal;
+}
+.card h1 {
+  color: var(--Very_dark_blue);
+  font-size: 32px;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  line-height: 29px;
+}
+p {
+  line-height: 22px;
+}
+#price {
+  color: var(--Dark_cyan);
+  display: inline;
+}
+del {
+  vertical-align: super;
+  margin-left: 15px;
+}
+a:link,
+a:visited {
+  display: inline-block;
+  width: 236px;
+  height: 47px;
+  background: var(--Dark_cyan);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--White);
+  font-weight: 500;
+}
+a:hover {
+  background: var(--Very_dark_blue);
+}
+a img {
+  margin-right: 10px;
+}
+/* For Mobiles */
+@media (max-width: 375px) {
+  .card {
+    display: block;
+    width: 342px;
+    height: auto;
+  }
+  .card .p1 img {
+    width: 100%;
+    height: 240px;
+  }
+  a:link,
+  a:visited {
+    width: 100%;
+  }
+}
